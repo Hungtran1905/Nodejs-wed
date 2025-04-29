@@ -7,7 +7,7 @@ const TodoNew = (props) => {
     setValueInput(name)
   }
   const handleOnclick = () => {
-    console.log(valueInput)
+    addNewTodo(valueInput)
   }
   return (
     <div className="todo-new">

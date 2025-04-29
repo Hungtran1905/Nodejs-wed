@@ -1,9 +1,13 @@
-const TodoNew = () => {
+import { useState } from "react"
+
+const TodoNew = (props) => {
+  const [valueInput, setValueInput] = useState("Hung")
+  const { addNewTodo } = props
   const handleOnchange = (name) => {
-    console.log(name)
+    setValueInput(name)
   }
   const handleOnclick = () => {
-    alert("Click me")
+    console.log(valueInput)
   }
   return (
     <div className="todo-new">

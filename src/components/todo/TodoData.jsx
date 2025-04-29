@@ -1,9 +1,12 @@
-const TodoData = () => {
-    return (
-        <div className="todo-data">
-          <div>Learning React</div>
-          <div>Learning Java</div>
-        </div>
-    )
+const TodoData = (props) => {
+  return (
+    <div className="todo-data">
+      <div>Learning React</div>
+      <div>Learning Java</div>
+      <div>
+        {JSON.stringify(props.todoList)}
+      </div>
+    </div>
+  )
 }
 export default TodoData

@@ -7,10 +7,10 @@ import { useState } from "react"
 const App = () => {
   const [todoList, setTodoList] = useState([
     {
-      id: 1, age: 24
+      id: 1, name: "Learning Java"
     },
     {
-      id: 2, age: 25
+      id: 2, name: "Learning React"
     }
   ])
   const addNewTodo = (name) => {

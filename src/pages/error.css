@@ -1,0 +1,15 @@
+#error-page {
+    position: absolute;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+p {
+    font-size: 50px;
+}
+
+p:nth-child(3) {
+    color: red;
+}

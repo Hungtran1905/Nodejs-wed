@@ -6,12 +6,12 @@ import { useState } from "react"
 
 const App = () => {
   const [todoList, setTodoList] = useState([
-    {
-      id: 1, name: "Learning Java"
-    },
-    {
-      id: 2, name: "Learning React"
-    }
+    // {
+    //   id: 1, name: "Learning Java"
+    // },
+    // {
+    //   id: 2, name: "Learning React"
+    // }
   ])
   const addNewTodo = (name) => {
     const newTodo = {

@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 const TodoNew = (props) => {
-  const [valueInput, setValueInput] = useState("Hung")
+  const [valueInput, setValueInput] = useState("")
   const { addNewTodo } = props
   const handleOnchange = (name) => {
     setValueInput(name)

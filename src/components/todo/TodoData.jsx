@@ -5,8 +5,8 @@ const TodoData = (props) => {
       {todoList.map((item) => {
         return (
           <div className={`todo-item`} key={item.id}>
-            <div>{item.name}</div>
-            <button>Delete</button>
+            <div className="data-name">{item.name}</div>
+            <button className="del">Delete</button>
 
           </div>)
       })}

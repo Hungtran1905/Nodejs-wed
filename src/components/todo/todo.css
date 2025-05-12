@@ -63,6 +63,7 @@ button {
   border-radius: 5px;
   border: solid #000 1px;
   line-height: 2.6;
+  background-color: #ebdddd;
 }
 
 .data-name {

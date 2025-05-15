@@ -4,7 +4,8 @@ import { createUserAPI } from "../../services/api_services";
 
 
 
-const UserForm = () => {
+const UserForm = (props) => {
+    const { loadUser } = props;
     const [fullName, setFullName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -27,6 +28,7 @@ const UserForm = () => {
                 description: "Tạo user thành công!"
             })
             resetAndCloseModal();
+            await loadUser();
         } else {
             notification.error({
                 message: "Error create user",

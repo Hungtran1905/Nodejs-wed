@@ -11,6 +11,7 @@ const UserForm = (props) => {
     const [password, setPassword] = useState("");
     const [phone, setPhoneNumber] = useState("");
     const [isModalOpen, setIsModalOpen] = useState(false);
+
     const resetAndCloseModal = () => {
         setIsModalOpen(false);
         setFullName("");

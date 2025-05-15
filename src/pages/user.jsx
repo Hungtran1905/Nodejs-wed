@@ -1,5 +1,5 @@
-import UserTable from "../components/user/user_table";
-import UserForm from "../components/user/user_form";
+import UserTable from "../components/user/user.table";
+import UserForm from "../components/user/user.form";
 import { useEffect, useState } from 'react';
 import { fetchAllUserAPI } from '../services/api_services';
 

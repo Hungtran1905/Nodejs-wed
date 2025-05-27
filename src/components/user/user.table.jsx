@@ -27,9 +27,10 @@ const UserTable = (props) => {
             })
         }
     };
-    const cancel = e => {
-        console.log(e);
-        message.error('Click on No');
+    const cancel = () => {
+        notification.error({
+            message: "Hủy xóa người dùng!"
+        });
     };
     const columns = [
         {

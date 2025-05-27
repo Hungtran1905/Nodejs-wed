@@ -9,6 +9,7 @@ const ViewUserDetail = (props) => {
     } = props;
     return (
         <Drawer
+            width={"40vw"}
             title="Chi tiết người dùng"
             onClose={() => {
                 setDataDetail(null);

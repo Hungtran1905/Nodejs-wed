@@ -7,7 +7,6 @@ const ViewUserDetail = (props) => {
         isDetailOpen,
         setIsDetailOpen
     } = props;
-    console.log("check", dataDetail)
     return (
         <Drawer
             title="Chi tiết người dùng"

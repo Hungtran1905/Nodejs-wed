@@ -1,6 +1,10 @@
 import Header from "./components/layout/header"
 import Footer from "./components/layout/footer"
 import { Outlet } from "react-router-dom"
+import { useState } from "react"
+import TodoNew from "./components/todo/TodoNew"
+import TodoData from "./components/todo/TodoData"
+
 
 const TodoApp = () => {
   const [todoList, setTodoList] = useState([

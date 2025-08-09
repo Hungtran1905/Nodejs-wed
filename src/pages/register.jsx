@@ -34,7 +34,7 @@ const RegisterPage = () => {
         // onFinish={onFinish}
         // onFinishFailed={onFinishFailed}
         >
-            <h3 style={{ textAlign: "center" }}>Đăng ký tài khoản</h3>
+            <h3 style={{ textAlign: "center" }}>Register account</h3>
             <Row justify={"center"}>
                 <Col xs={24} md={8}>
                     <Form.Item
@@ -89,7 +89,7 @@ const RegisterPage = () => {
 
                     <Button onClick={() => form.submit()} type="primary">Register</Button>
                     <Divider />
-                    <div>Đã có tài khoản? <Link to={"/login"}>Đăng nhập tại đây</Link></div>
+                    <div>Already have an account? <Link to={"/login"}>Login here</Link></div>
                 </Col>
             </Row>
 

@@ -2,8 +2,13 @@ import { Link } from 'react-router-dom'
 import { UsergroupAddOutlined, HomeOutlined, ProductOutlined, SettingOutlined } from '@ant-design/icons'
 import { Menu } from 'antd'
 import { useState } from 'react'
+import { useContext } from 'react'
+import { AuthContext } from '../context/auth.context.jsx'
 const Header = () => {
     const [current, setCurrent] = useState('');
+
+    const { user } = useContext(AuthContext);
+    console.log("user", user);
     const onClick = e => {
         setCurrent(e.key);
     };
@@ -24,16 +29,16 @@ const Header = () => {
             icon: <ProductOutlined />
         },
         {
-            label: 'Cài đặt',
+            label: 'Settings',
             key: 'setting',
             icon: <SettingOutlined />,
             children: [
                 {
-                    label: <Link to={"/login"}>Đăng nhập</Link>,
+                    label: <Link to={"/login"}>Login</Link>,
                     key: 'login',
                 },
                 {
-                    label: 'Đăng xuất',
+                    label: 'Logout',
                     key: 'logout',
                 },
             ]

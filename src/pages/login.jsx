@@ -2,19 +2,22 @@ import { ArrowRightOutlined } from "@ant-design/icons";
 import { Button, Form, Input, Row, Col, Divider, message, notification } from "antd";
 import { Link } from "react-router-dom";
 import { loginAPI } from "../services/api_services";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { AuthContext } from "../components/context/auth.context.jsx";
 
 const LoginPage = () => {
     const [form] = Form.useForm();
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
+    const { setUser } = useContext(AuthContext);
     const onFinish = async (values) => {
         setLoading(true);
         const res = await loginAPI(values.email, values.password);
         if (res.data) {
             message.success("Login successful!");
+            localStorage.setItem("access_token", res.data.access_token);
+            setUser(res.data.user);
             navigate("/");
         } else {
             notification.error({
@@ -36,7 +39,7 @@ const LoginPage = () => {
                     border: "1px solid #ccc",
                     borderRadius: "5px"
                 }} >
-                    <legend>Đăng nhập</legend>
+                    <legend>Login</legend>
                     <Form
                         form={form}
                         layout="vertical"
@@ -71,7 +74,7 @@ const LoginPage = () => {
                         </Form.Item>
                     </Form>
                     <Divider />
-                    <div style={{ textAlign: "center" }}>Chưa có tài khoản? <Link to="/register">Đăng ký ngay</Link></div>
+                    <div style={{ textAlign: "center" }}>Don't have an account? <Link to="/register">Register now</Link></div>
                 </fieldset>
             </Col>
         </Row >
